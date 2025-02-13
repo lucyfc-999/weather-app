@@ -46,7 +46,6 @@
 <ul>
   <li>Consulta del clima deseado, por ciudad.</li>
   <li>Visualización de temperatura, humedad, fecha, hora, etc.</li>
-  <li>Arquitectura basada en microservicios (backend separado del frontend).</li>
   <li>Comunicación backend-frontend mediante API RESTful.</li>
   <li>Diseño responsive.</li>
 </ul>
