@@ -1,0 +1,12 @@
+h1 {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  img {
+    max-width: 100px;
+  }

@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{ title }}</h1>
+  
+    <!-- Formulario con la acción del botón -->
+    <div class="card shadow-lg p-4">
+      <form (ngSubmit)="getWeather()">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="city"
+            placeholder="Enter city name"
+            name="city"  
+            required
+          />
+          <button type="submit" class="btn btn-primary">Get Weather</button>
+        </div>
+      </form>
+  
+      <!-- Datos del clima -->
+      <div *ngIf="weatherData" class="mt-4">
+        <img [src]="weatherData.conditionIcon" alt="weather icon" class="img-fluid mt-3" />
+        <h2 class="text-info mt-3" >Weather for {{ weatherData.city }}, {{ weatherData.country }}</h2>
+        <p class="mt-5"><strong>Region:</strong> {{ weatherData.region }}</p>
+        <p><strong>Temperature:</strong> {{ weatherData.tempC }}°C / {{ weatherData.tempF }}°F</p>
+        <p><strong>Condition:</strong> {{ weatherData.conditionText }}</p>
+        <p><strong>Humidity:</strong> {{ weatherData.humidity }}%</p>
+        <p><strong>Cloudiness:</strong> {{ weatherData.cloud }}%</p>
+        <p><strong>Date Time:</strong> {{ weatherData.dateTime }}</p>
+      </div>
+    </div>
+  </div>
